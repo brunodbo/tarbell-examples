@@ -26,3 +26,7 @@ a { color: #4B58A6; }
 .filter-red { background-color: #FB6353; }
 
 canvas {-ms-touch-action: double-tap-zoom;}
+
+.container-fluid { padding: 0; }
+
+#filters { padding: 20px; }
