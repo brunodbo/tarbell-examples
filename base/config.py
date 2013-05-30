@@ -8,7 +8,7 @@ import markdown as Markdown
 import os
 
 URL_ROOT = ''
-DOMAIN = 'http://tarbell.tribapps.com'
+DOMAIN = 'http://tarbell.recoveredfactory.net'
 blueprint = Blueprint('base', __name__)
 
 
