@@ -10,9 +10,7 @@ GOOGLE_DOC = {
 """
 Set default context. These variables will be globally available to the template.
 """
-DEFAULT_CONTEXT = {
-    'title': 'Searchable Map Example',
-}
+# DEFAULT_CONTEXT = {}
 
 """
 Root URL project will appear at (e.g. http://mydomain.tld/)
