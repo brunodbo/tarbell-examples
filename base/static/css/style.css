@@ -1,10 +1,25 @@
+@font-face {
+    font-family: 'Aaaiight';
+    src: url('/font/aaaiight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Graffiti font */
+.graffiti { font-family: "Aaaiight", sans-serif; font-weight: normal; font-style: normal; }
+
 /* Account for sticky header navigation */
-body.has-nav { padding-top: 50px; }
+body.has-nav { padding-top: 30px; }
 body.has-nav section { padding-top: 41px; margin-top: -41px; }
 body.has-nav .toggle { display: none; } 
 
 /* Reset nested link elements to default color */
 a > * { color: #333; }
+
+/* Branding */
+#branding { padding-top: 30px; text-align: center; color: #fff; border-bottom: 1px solid #999; background-image: url('/img/header-bg.jpg'); background-position: 50% 70%; text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000; -1px 1px 0 #000, 1px 1px 0 #000; }
+#branding h1 { font-size: 80px; }
+#branding h2 { font-size: 32px; }
 
 /* Mobile devices */
 @media all and (max-width: 767px) {

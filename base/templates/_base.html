@@ -29,7 +29,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% endblock meta %}
 </head>
-<body{% block bodyattrs %} class="has-nav {{ pagename }}"{% endblock bodyattrs %}>
+<body{% block bodyattrs %} class="{{ pagename }}"{% endblock bodyattrs %}>
 
 {# Override the `container` block to disable default layout. #}
 {% block container %}
@@ -37,6 +37,12 @@
         {% block header %}{% endblock header %}
     </div>
     <div id="content">
+        {% block branding %}
+        <div id="branding" class="graffiti">
+            <h1>{{ title }}</h1>
+            <h2>Supreme Chi*Town Coding Crew</h2>
+        </div>
+        {% endblock branding %}
         {% block content %}{% endblock content %}
     </div>
     <div id="footer">
