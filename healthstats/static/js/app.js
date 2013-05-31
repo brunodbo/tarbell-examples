@@ -84,8 +84,8 @@ function($, _, Highcharts) {
                     text: 'Low birth weight as % of children born',
                 },
                 yAxis: {
-                    tickInterval: 25,
-                    max: 25,
+                    tickInterval: 5,
+                    max: 20,
                     title: {
                         text: null
                     }

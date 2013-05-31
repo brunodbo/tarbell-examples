@@ -17,26 +17,22 @@
         <thead>
             <th>Area</th>
             <th>Birthrate (2009)</th>
-            <th>Birthrate difference 1999 - 2009</th>
             <th>Birthrate rank (2009)</th>
             <th>Birthrate percentile rank (2009)</th>
             <th>Low birth weight % rank (2009)</th>
             <th>Low birth weight % percentile rank (2009)</th>
-            <th>Preterm birth % rank (2009)</th>
-            <th>Preterm birth % percentile rank (2009)</th>
+            <th>Birthrate difference 1999 - 2009</th>
         </thead>
         <tbody>
             {% for area in summary %}
             <tr id="area-{{ area.number }}">
                 <td><a href="#area-{{ area.number }}-detail">{{ area.name }}</a></td>
                 <td>{{ area.birthrate_2009 }}<span class="unit">/1k</span></td>
-                <td>{{ area.birthrate_difference_1999_2009 }}<span class="unit">%</span></td>
                 <td>{{ area.birthrate_rank_2009 }}</td>
                 <td>{{ area.birthrate_percentile_rank_2009 }}</td>
                 <td>{{ area.lowbirthweight_rank_2009 }}</td>
                 <td>{{ area.lowbirthweight_percentile_rank_2009 }}</td>
-                <td>{{ area.pretermpct_rank_2009 }}</td>
-                <td>{{ area.pretermpct_percentile_rank_2009 }}</td>
+                <td>{{ area.birthrate_difference_1999_2009 }}<span class="unit">%</span></td>
             </tr>
             {% endfor %}
         </tbody>
@@ -46,7 +42,7 @@
     <div id="area-{{ area.number }}-detail" class="row-fluid">
         <h2>{{ area.name }}</h2>
         <div class="summary">
-            <table>
+            <table class="table">
                 <thead>
                     <tr>
                         <th></th>
@@ -67,12 +63,6 @@
                         <td>{{ area.lowbirthweight_2009 }}<span class="unit">% of all births</span></td>
                         <td>{{ area.lowbirthweight_rank_2009 }}</td>
                         <td>{{ area.lowbirthweight_percentile_rank_2009 }}</td>
-                    </tr>
-                    <tr>
-                        <th>Preterm infants (2009)</th>
-                        <td>{{ area.pretermpct_2009 }}<span class="unit">% of all births</span></td>
-                        <td>{{ area.pretermpct_rank_2009 }}</td>
-                        <td>{{ area.pretermpct_percentile_rank_2009 }}</td>
                     </tr>
                     <tr>
                         <th>Birthrate difference between 1999 and 2009</th>
