@@ -45,7 +45,7 @@
     {% for area in summary %}
     <div id="area-{{ area.number }}-detail" class="row-fluid">
         <h2>{{ area.name }}</h2>
-        <div class="span5 summary">
+        <div class="summary">
             <table>
                 <thead>
                     <tr>
@@ -83,8 +83,11 @@
                 </tbody>
             </table>
         </div>
-        <div class="span7 charts">
+        <div class="charts">
+            <div class="chart birthrate-chart" id="area-{{ area.number }}-birthrate-chart"></div>
+            <div class="chart lowbirthweight-chart" id="area-{{ area.number }}-lowbirthweight-chart"></div>
         </div>
     </div>
     {% endfor %}
+</div>
 {% endblock %}
