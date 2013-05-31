@@ -29,7 +29,7 @@
         <tbody>
             {% for area in summary %}
             <tr id="area-{{ area.number }}">
-                <td>{{ area.name }}</td>
+                <td><a href="#area-{{ area.number }}-detail">{{ area.name }}</a></td>
                 <td>{{ area.birthrate_difference_1999_2009 }}%</td>
                 <td>{{ area.birthrate_rank_2009 }}</td>
                 <td>{{ area.birthrate_percentile_rank_2009 }}</td>
@@ -41,4 +41,14 @@
             {% endfor %}
         </tbody>
     </table>
+
+    {% for area in summary %}
+    <div id="area-{{ area.number }}-detail" class="row-fluid">
+        <h2>{{ area.name }}</h2>
+        <div class="span5 summary">
+        </div>
+        <div class="span7 charts">
+        </div>
+    </div>
+    {% endfor %}
 {% endblock %}
