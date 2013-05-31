@@ -18,6 +18,7 @@
     <table class="table">
         <thead>
             <th>Area</th>
+            <th>Birthrate (2009)</th>
             <th>Birthrate difference 1999 - 2009</th>
             <th>Birthrate rank (2009)</th>
             <th>Birthrate percentile rank (2009)</th>
@@ -30,7 +31,8 @@
             {% for area in summary %}
             <tr id="area-{{ area.number }}">
                 <td><a href="#area-{{ area.number }}-detail">{{ area.name }}</a></td>
-                <td>{{ area.birthrate_difference_1999_2009 }}%</td>
+                <td>{{ area.birthrate_2009 }}<span class="unit">/1k</span></td>
+                <td>{{ area.birthrate_difference_1999_2009 }}<span class="unit">%</span></td>
                 <td>{{ area.birthrate_rank_2009 }}</td>
                 <td>{{ area.birthrate_percentile_rank_2009 }}</td>
                 <td>{{ area.lowbirthweight_rank_2009 }}</td>
