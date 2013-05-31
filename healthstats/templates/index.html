@@ -46,6 +46,42 @@
     <div id="area-{{ area.number }}-detail" class="row-fluid">
         <h2>{{ area.name }}</h2>
         <div class="span5 summary">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Value</th>
+                        <th>Rank</th>
+                        <th>Percentile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Birthrate (2009)</th>
+                        <td>{{ area.birthrate_2009 }} per 1,000 residents</td>
+                        <td>{{ area.birthrate_rank_2009 }}</td>
+                        <td>{{ area.birthrate_percentile_rank_2009 }}</td>
+                    </tr>
+                    <tr>
+                        <th>Low birth weight (2009)</th>
+                        <td>{{ area.lowbirthweight_2009 }}% of all births</td>
+                        <td>{{ area.lowbirthweight_rank_2009 }}</td>
+                        <td>{{ area.lowbirthweight_percentile_rank_2009 }}</td>
+                    </tr>
+                    <tr>
+                        <th>Preterm infants (2009)</th>
+                        <td>{{ area.pretermpct_2009 }}% of all births</td>
+                        <td>{{ area.pretermpct_rank_2009 }}</td>
+                        <td>{{ area.pretermpct_percentile_rank_2009 }}</td>
+                    </tr>
+                    <tr>
+                        <th>Birthrate difference between 1999 and 2009</th>
+                        <td>{{ area.birthrate_difference_1999_2009 }}%</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div class="span7 charts">
         </div>
