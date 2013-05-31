@@ -39,6 +39,73 @@ function($, _, Highcharts) {
                 }
             });
 
+            $('#area-' + area.number + '-birthrate-chart').highcharts({
+                credits: {
+                    enabled: false
+                },
+                chart: {
+                    type: "area"
+                },
+                title: {
+                    text: 'Births per 1,000 residents',
+                },
+                yAxis: {
+                    min: 5,
+                    max: 30,
+                    tickInterval: 5,
+                    title: {
+                        text: null
+                    }
+                },
+                xAxis: {
+                    categories: ['1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009']
+                },
+                legend: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        animation: false
+                    }
+                },
+                series: [{
+                    name: "Birthrate (per 1,000 residents)",
+                    data: data["birthrate"]
+                }]
+            });
+            $('#area-' + area.number + '-lowbirthweight-chart').highcharts({
+                credits: {
+                    enabled: false
+                },
+                chart: {
+                    type: "area"
+                },
+                title: {
+                    text: 'Low birth weight as % of children born',
+                },
+                yAxis: {
+                    tickInterval: 25,
+                    max: 25,
+                    title: {
+                        text: null
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                xAxis: {
+                    categories: ['1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009']
+                },
+                plotOptions: {
+                    series: {
+                        animation: false
+                    }
+                },
+                series: [{
+                    name: "Low birth weight as % of children born",
+                    data: data["lowbirthweight"]
+                }]
+            });
         });
     });
 });
