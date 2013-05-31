@@ -14,4 +14,7 @@ require.config( {
 require([ "jquery", "underscore", "highcharts" ],
 function($, _, Highcharts) {
     console.log("Hello world. AJAX and charts to come.")
+    $.getJSON('/healthstats/json/summary.json', function(data) {
+        console.log(data);
+    });
 });
