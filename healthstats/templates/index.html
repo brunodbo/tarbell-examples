@@ -16,6 +16,9 @@
 <div class="container-fluid">
     <h1>{{ title }}</h1>
     <table class="table">
+        <thead>
+            <th>Area</th>
+        </thead>
         <tbody>
             {% for area in summary %}
             <tr id="area-{{ area.number }}">
