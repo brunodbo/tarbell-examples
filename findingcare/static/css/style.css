@@ -1,0 +1,18 @@
+/* Styles for findingcare */
+
+body.has-nav { padding-top: 0; }
+#content { position: absolute; top: 0; left: 0; overflow-y: hidden; }
+
+section { position: relative; }
+
+.bubble { 
+    position: absolute; 
+    top: 200px; right: 100px; 
+    width: 200px;
+    background-color: #fff;
+    padding: 10px;
+    z-index: 10;
+}
+
+.navbar { position: absolute; z-index: 500; top: 0; left: 0; width: 100%; }
+.navbar-inner { border-radius: 0; }

@@ -39,6 +39,8 @@ function($, _, Highcharts) {
                 }
             });
 
+            console.log(data);
+
             $('#area-' + area.number + '-birthrate-chart').highcharts({
                 credits: {
                     enabled: false

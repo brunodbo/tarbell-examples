@@ -1,0 +1,46 @@
+{# The default project templates assumes a _base.html template to be extended. #}
+{% extends '_base.html' %}
+
+{% block css %}
+
+{# Call base template css block #}
+{{ super() }}
+
+{# Now add our stylesheet using static_url function #}
+<link rel="stylesheet" type="text/css" href="{{ static_url('findingcare', '/css/style.css') }}" />
+{% endblock %}
+
+{% block branding %}{% endblock branding %}
+
+{% block content %}
+
+<section id="slide1" data-title="{{ slide1.title.value }}">
+<div class="background-image"><img src="{{ slide1.image.value }}" /></div>
+
+<div class="bubble" id="slide1-bubble1" style="width: {{ slide1.bubble_width.value }}; left: {{ slide1.bubble_position_x.value }}; top: {{ slide1.bubble_position_y.value }};">
+
+    <h1>{{ slide1.title.value }}</h1>
+
+    {# AUDIO PLAYER if keys exist in spreadsheet #}
+
+    {{ slide1.body.markup|process_text }} 
+</div>
+
+</section>
+
+<section id="slide2" data-title="{{ slide2.title.value }}">
+<div class="background-image"><img src="{{ slide2.image.value }}" /></div>
+
+<div class="bubble" id="slide2-bubble1" style="width: {{ slide2.bubble_width.value }}; left: {{ slide2.bubble_position_x.value }}; top: {{ slide2.bubble_position_y.value }};">
+
+    <h1>{{ slide2.title.value }}</h1>
+
+    {# AUDIO PLAYER if keys exist in spreadsheet #}
+
+    {{ slide2.body.markup|process_text }} 
+</div>
+
+</section>
+
+
+{% endblock %}
