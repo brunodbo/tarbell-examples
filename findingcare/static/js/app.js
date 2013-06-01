@@ -19,13 +19,23 @@ function($, NavigationView) {
 
     $('section').each(function(i) {
         var section = $(this);
+        if (i === 0) {
+            section.addClass('active').removeClass('fast');
+        }
         maximizeSize(section);
     });
 
-    $('.nav-buttons a').click(function(){
+    $('.nav-buttons a, #nav a').click(function(){
+        var href = $.attr(this, 'href')
+
+        $('#nav li').removeClass('active');
+        $('#nav li a[href="' + href + '"]').parent().addClass('active');
+
+        $('section').removeClass('active');
+        $(href).addClass('active');
         $('#content').animate({
             scrollTop: $( $.attr(this, 'href') ).offset().top
-        }, 500);
+        }, 1000);
         return false;
     });
     

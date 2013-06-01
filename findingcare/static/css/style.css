@@ -4,6 +4,16 @@ body.has-nav { padding-top: 0; }
 #content { position: absolute; top: 0; left: 0; overflow-y: hidden; }
 
 section { position: relative; }
+section {
+    -webkit-transition: -webkit-filter 2s ease-in-out;
+    -webkit-filter: grayscale(100%); 
+}
+section.active {
+    -webkit-filter: grayscale(0); 
+}
+section.fast {
+    -webkit-transition: -webkit-filter .6s ease-in-out;
+}
 
 .bubble { 
     position: absolute; 
