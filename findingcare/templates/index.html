@@ -21,10 +21,9 @@
 
     <h1>{{ slide1.title.value }}</h1>
 
-    {# AUDIO PLAYER if keys exist in spreadsheet #}
-
-    {{ slide1.body.markup|markdown }} 
-
+    <div class="body">
+        {{ slide1.body.markup|markdown }} 
+    </div>
 
     <div class="nav-buttons">
         <a href="#slide2" class="btn btn-primary">Next &raquo;</a>
