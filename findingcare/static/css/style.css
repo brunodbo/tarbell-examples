@@ -23,7 +23,8 @@ a.modal-link { color: #00c; }
 
 a.modal-link i { margin-left: 4px; }
 
-.bubble { 
+.bubble {
+    display: none;
     position: absolute; 
     background-color: #eee;
     padding: 14px 20px;

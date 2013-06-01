@@ -39,6 +39,9 @@ function($, NavigationView, jPlayer) {
             var section = $(this);
             if (i === 0) {
                 section.addClass('active').removeClass('fast');
+                setTimeout(function() {
+                    section.find('.bubble').fadeIn('slow');
+                }, 900);
             }
             offsets['#' + section.attr('id')] = $(window).height() * i; 
             maximizeSize(section);
@@ -76,14 +79,16 @@ function($, NavigationView, jPlayer) {
         $('#nav li').removeClass('active');
         $('#nav li a[href="' + href + '"]').parent().addClass('active');
 
-        console.log(href);
-        console.log($( href ).position().top);
-
         $('section').removeClass('active');
         $(href).addClass('active');
         $('#content').animate({
             scrollTop: offsets[href]
-        }, 750);
+        }, 1000, function() {
+            $('.bubble').hide();
+            setTimeout(function() {
+                $(href).find('.bubble').fadeIn('slow');
+            }, 400);
+        });
         return false;
 
     });
