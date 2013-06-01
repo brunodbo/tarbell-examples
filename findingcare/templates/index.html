@@ -1,6 +1,8 @@
 {# The default project templates assumes a _base.html template to be extended. #}
 {% extends '_base.html' %}
 
+{% import 'findingcare/_player.html' as player_macros with context %}
+
 {% block css %}
 
 {# Call base template css block #}
