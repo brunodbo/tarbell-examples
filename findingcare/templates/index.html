@@ -1,6 +1,5 @@
 {# The default project templates assumes a _base.html template to be extended. #}
 {% extends '_base.html' %}
-
 {% import 'findingcare/_player.html' as player_macros with context %}
 
 {% block css %}
@@ -10,11 +9,15 @@
 
 {# Now add our stylesheet using static_url function #}
 <link rel="stylesheet" type="text/css" href="{{ static_url('findingcare', '/css/style.css') }}" />
+<link type="text/css" href="{{ static_url(project, "skin/jplayer.blue.monday.css") }}" rel="stylesheet" />
 {% endblock %}
 
 {% block branding %}{% endblock branding %}
 
 {% block content %}
+
+
+
 
 <section id="slide1" data-title="{{ slide1.title.value }}">
     <div class="background-image"><img src="{{ slide1.image.value }}" /></div>
@@ -24,6 +27,7 @@
     <h1>{{ slide1.title.value }}</h1>
 
     <div class="body">
+        {{ player_macros.player('slide1', slide1.audio_var.value) }}
         {{ slide1.body.markup|markdown }} 
     </div>
 

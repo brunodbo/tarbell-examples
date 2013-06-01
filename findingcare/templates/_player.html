@@ -1,8 +1,6 @@
-{% macro player(slider_name, audio_var=None, file_path=None, skin_path='skin/jplayer.blue.monday.css') -%}
+{% macro player(slider_name, audio_var=None) -%}
 {% if audio_var %}
-    <link type="text/css" href="{{ static_url('findingcare', skin_path) }}" rel="stylesheet" />
-    <script src="{{ static_url('findingcare', 'js/jplayer/jquery.jplayer.min.js' ) }}" ></script>
-    <div id="{{ 'jplayer_' + slider_name }}" class="jp-jplayer"></div>
+<div id="{{ 'jplayer_' + slider_name }}" class="jp-jplayer" data-audiofile="/findingcare/audio/{{ audio_var }}"></div>
     <div id="{{ 'jplayer_container_' + slider_name }}" class="jp-audio">
       <div class="jp-type-single">
         <div class="jp-gui jp-interface">
@@ -42,6 +40,7 @@
         </div>
       </div>
   </div>
+    
 {% endif %}
 
 {%- endmacro %}
