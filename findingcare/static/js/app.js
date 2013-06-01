@@ -27,7 +27,7 @@ function($, NavigationView) {
             if (i === 0) {
                 section.addClass('active').removeClass('fast');
             }
-            offsets['#' + section.attr('id')] = section.position().top; 
+            offsets['#' + section.attr('id')] = $(window).height() * i; 
             maximizeSize(section);
         });
     }
