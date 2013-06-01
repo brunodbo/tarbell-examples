@@ -27,7 +27,10 @@
     <h1>{{ slide1.title.value }}</h1>
 
     <div class="body">
+        <div class="audio-wrapper">
         {{ player_macros.player('slide1', slide1.audio_var.value) }}
+        <p>{{ slide1.audio_caption.value }}</p>
+        </div>
         {{ slide1.body.markup|markdown }} 
     </div>
 
