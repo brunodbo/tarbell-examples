@@ -14,9 +14,11 @@ function($, NavigationView) {
         selector.width($(window).width());
     }
 
-    // Full screen each slide
+    // Maximize size of content wrapper, fade in content
     maximizeSize($('#content'));
+    $('#content').fadeIn();
 
+    // Size each section
     $('section').each(function(i) {
         var section = $(this);
         if (i === 0) {

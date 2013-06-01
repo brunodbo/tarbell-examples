@@ -17,13 +17,13 @@
 <section id="slide1" data-title="{{ slide1.title.value }}">
 <div class="background-image"><img src="{{ slide1.image.value }}" /></div>
 
-<div class="bubble" id="slide1-bubble1" style="width: {{ slide1.bubble_width.value }}; left: {{ slide1.bubble_position_x.value }}; top: {{ slide1.bubble_position_y.value }};">
+<div class="bubble fast" id="slide1-bubble1" style="width: {{ slide1.bubble_width.value }}; left: {{ slide1.bubble_position_x.value }}; top: {{ slide1.bubble_position_y.value }};">
 
     <h1>{{ slide1.title.value }}</h1>
 
     {# AUDIO PLAYER if keys exist in spreadsheet #}
 
-    {{ slide1.body.markup|process_text }} 
+    {{ slide1.body.markup|markdown }} 
 
 
     <div class="nav-buttons">
@@ -42,7 +42,7 @@
 
     {# AUDIO PLAYER if keys exist in spreadsheet #}
 
-    {{ slide2.body.markup|process_text }} 
+    {{ slide2.body.markup|markdown }} 
 
     <div class="nav-buttons">
         <a href="#slide1" class="btn btn-primary">&laquo; Previous</a>

@@ -1,17 +1,19 @@
 /* Styles for findingcare */
 
+#content { display: none; }
+
 body.has-nav { padding-top: 0; }
 #content { position: absolute; top: 0; left: 0; overflow-y: hidden; }
 
 section { position: relative; }
-section {
+section img {
     -webkit-transition: -webkit-filter 2s ease-in-out;
     -webkit-filter: grayscale(100%); 
 }
-section.active {
+section.active img {
     -webkit-filter: grayscale(0); 
 }
-section.fast {
+section.fast img {
     -webkit-transition: -webkit-filter .6s ease-in-out;
 }
 
