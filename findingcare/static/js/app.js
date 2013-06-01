@@ -5,6 +5,7 @@ function($, NavigationView) {
     var nav = new NavigationView({
         el: $('#header'),
         title: { label: document.title, url: '' },
+        scrollspy: false
     }).render();
 
     // Rewrite as jquery plugin
@@ -20,4 +21,12 @@ function($, NavigationView) {
         var section = $(this);
         maximizeSize(section);
     });
+
+    $('.nav-buttons a').click(function(){
+        $('#content').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 500);
+        return false;
+    });
+    
 });
