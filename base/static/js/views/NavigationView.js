@@ -4,6 +4,7 @@ define(['backbone', 'text!base/templates/nav.jst', 'bootstrap'], function(Backbo
         parse_selector: '#content section',
         initialize: function(options) {
             this.template = options.template || NavTemplate;
+            this.scrollspy = options.scrollspy || true;
             this.parse_selector = options.parse_selector || this.parse_selector;
             this.parse_sections = options.parse_sections || this.parse_sections;
             this.context = {
@@ -17,7 +18,9 @@ define(['backbone', 'text!base/templates/nav.jst', 'bootstrap'], function(Backbo
         render: function() {
             $('body').addClass('has-nav').attr('data-offset', '82').attr('data-spy', 'scroll');
             var rendered = _.template(this.template, this.context);
-            this.$el.append(rendered).find('#nav').scrollspy();
+            if (this.scrollspy) {
+                this.$el.append(rendered).find('#nav').scrollspy();
+            }
             return this;
         },
         parse_sections: function() {
