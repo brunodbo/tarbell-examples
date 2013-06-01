@@ -54,7 +54,7 @@ function($, NavigationView) {
         $(href).addClass('active');
         $('#content').animate({
             scrollTop: offsets[href]
-        }, 1000);
+        }, 750);
         return false;
     });
 });

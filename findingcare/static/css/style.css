@@ -7,7 +7,7 @@ body.has-nav { padding-top: 0; }
 
 section { position: relative; margin: 0; padding: 0; }
 section img {
-    -webkit-transition: -webkit-filter 2s ease-in-out;
+    -webkit-transition: -webkit-filter 2.5s ease-in-out;
     -webkit-filter: grayscale(100%); 
 }
 section.active img {
