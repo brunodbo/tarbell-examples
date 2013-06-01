@@ -27,6 +27,10 @@ function($, NavigationView) {
         maximizeSize(section);
     });
 
+    // Attr links
+    $('.bubble a').attr('target', '_blank');
+
+    // Scrolly on clicky
     $('.nav-buttons a, #nav a').click(function(){
         var href = $.attr(this, 'href')
 
