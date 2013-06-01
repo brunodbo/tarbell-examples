@@ -51,15 +51,17 @@ function($, NavigationView, jPlayer) {
     //Audio files
     
     $.each($('.jp-jplayer'), function(){
+        var audiopath = $(this).data('audiofile'); 
+        var slidername = $(this).data('slidername'); 
         $(this).jPlayer({
             ready: function () {
                 $(this).jPlayer("setMedia", {
-                    mp3: $(this).data('audiofile')
-                    
+                    mp3: audiopath
                 });
             },
-            swfPath: "/js",
-            supplied: "m4a, oga"
+            cssSelectorAncestor: "#jplayer_container_" + slidername,
+            swfPath: "/findingcare/js/jplayer/",
+            supplied: "mp3"
         });
     });
     // Attr links

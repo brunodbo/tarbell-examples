@@ -25,14 +25,16 @@ a.modal-link i { margin-left: 4px; }
 
 .bubble { 
     position: absolute; 
-    top: 200px; right: 100px; 
-    width: 200px;
-    background-color: #fff;
-    padding: 10px;
+    background-color: #eee;
+    padding: 14px 20px;
     z-index: 10;
+    color: #000;
+    border: 2px solid #999;
 }
 
 .navbar { position: absolute; z-index: 500; top: 0; left: 0; width: 100%; }
 .navbar-inner { border-radius: 0; }
 
 .nav-buttons { text-align: center; }
+
+div.jp-audio, div.jp-interface { border: none; margin: 0 auto; }
