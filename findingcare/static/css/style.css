@@ -5,7 +5,7 @@
 body.has-nav { padding-top: 0; }
 #content { position: absolute; top: 0; left: 0; overflow-y: hidden; }
 
-section { position: relative; }
+section { position: relative; margin: 0; padding: 0; }
 section img {
     -webkit-transition: -webkit-filter 2s ease-in-out;
     -webkit-filter: grayscale(100%); 

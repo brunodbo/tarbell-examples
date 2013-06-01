@@ -14,6 +14,8 @@ function($, NavigationView) {
         selector.width($(window).width());
     }
 
+    var offsets = {};
+
     var initSlides = function() {
         // Maximize size of content wrapper, fade in content
         maximizeSize($('#content'));
@@ -25,6 +27,7 @@ function($, NavigationView) {
             if (i === 0) {
                 section.addClass('active').removeClass('fast');
             }
+            offsets['#' + section.attr('id')] = section.position().top; 
             maximizeSize(section);
         });
     }
@@ -44,10 +47,13 @@ function($, NavigationView) {
         $('#nav li').removeClass('active');
         $('#nav li a[href="' + href + '"]').parent().addClass('active');
 
+        console.log(href);
+        console.log($( href ).position().top);
+
         $('section').removeClass('active');
         $(href).addClass('active');
         $('#content').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
+            scrollTop: offsets[href]
         }, 1000);
         return false;
     });

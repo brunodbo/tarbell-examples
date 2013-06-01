@@ -17,9 +17,9 @@
 {% block content %}
 
 <section id="slide1" data-title="{{ slide1.title.value }}">
-<div class="background-image"><img src="{{ slide1.image.value }}" /></div>
+    <div class="background-image"><img src="{{ slide1.image.value }}" /></div>
 
-<div class="bubble fast" id="slide1-bubble1" style="width: {{ slide1.bubble_width.value }}; left: {{ slide1.bubble_position_x.value }}; top: {{ slide1.bubble_position_y.value }};">
+    <div class="bubble fast" id="slide1-bubble1" style="width: {{ slide1.bubble_width.value }}; left: {{ slide1.bubble_position_x.value }}; top: {{ slide1.bubble_position_y.value }};">
 
     <h1>{{ slide1.title.value }}</h1>
 
@@ -35,22 +35,50 @@
 </section>
 
 <section id="slide2" data-title="{{ slide2.title.value }}">
-<div class="background-image"><img src="{{ slide2.image.value }}" /></div>
+    <div class="background-image"><img src="{{ slide2.image.value }}" /></div>
 
-<div class="bubble" id="slide2-bubble1" style="width: {{ slide2.bubble_width.value }}; left: {{ slide2.bubble_position_x.value }}; top: {{ slide2.bubble_position_y.value }};">
+    <div class="bubble" id="slide2-bubble1" style="width: {{ slide2.bubble_width.value }}; left: {{ slide2.bubble_position_x.value }}; top: {{ slide2.bubble_position_y.value }};">
 
-    <h1>{{ slide2.title.value }}</h1>
+        <h1>{{ slide2.title.value }}</h1>
 
-    {# AUDIO PLAYER if keys exist in spreadsheet #}
+        {{ slide2.body.markup|markdown }} 
 
-    {{ slide2.body.markup|markdown }} 
-
-    <div class="nav-buttons">
-        <a href="#slide1" class="btn btn-primary">&laquo; Previous</a>
-        <a href="#slide3" class="btn btn-primary">Next &raquo;</a>
+        <div class="nav-buttons">
+            <a href="#slide1" class="btn btn-primary">&laquo; Previous</a>
+            <a href="#slide3" class="btn btn-primary">Next &raquo;</a>
+        </div>
     </div>
-</div>
+</section>
 
+<section id="slide3" data-title="{{ slide3.title.value }}">
+    <div class="background-image"><img src="{{ slide3.image.value }}" /></div>
+
+    <div class="bubble" id="slide3-bubble1" style="width: {{ slide3.bubble_width.value }}; left: {{ slide3.bubble_position_x.value }}; top: {{ slide3.bubble_position_y.value }};">
+
+        <h1>{{ slide3.title.value }}</h1>
+
+        {{ slide3.body.markup|markdown }} 
+
+        <div class="nav-buttons">
+            <a href="#slide2" class="btn btn-primary">&laquo; Previous</a>
+            <a href="#slide4" class="btn btn-primary">Next &raquo;</a>
+        </div>
+    </div>
+</section>
+
+<section id="slide4" data-title="{{ slide4.title.value }}">
+    <div class="background-image"><img src="{{ slide4.image.value }}" /></div>
+
+    <div class="bubble" id="slide4-bubble1" style="width: {{ slide4.bubble_width.value }}; left: {{ slide4.bubble_position_x.value }}; top: {{ slide4.bubble_position_y.value }};">
+
+        <h1>{{ slide4.title.value }}</h1>
+
+        {{ slide4.body.markup|markdown }} 
+
+        <div class="nav-buttons">
+            <a href="#slide3" class="btn btn-primary">&laquo; Previous</a>
+        </div>
+    </div>
 </section>
 
 
