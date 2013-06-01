@@ -17,6 +17,12 @@ section.fast img {
     -webkit-transition: -webkit-filter .6s ease-in-out;
 }
 
+.container-fluid { max-width: auto; width: auto; }
+
+a.modal-link { color: #00c; }
+
+a.modal-link i { margin-left: 5px; }
+
 .bubble { 
     position: absolute; 
     top: 200px; right: 100px; 

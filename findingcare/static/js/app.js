@@ -14,21 +14,28 @@ function($, NavigationView) {
         selector.width($(window).width());
     }
 
-    // Maximize size of content wrapper, fade in content
-    maximizeSize($('#content'));
-    $('#content').fadeIn();
+    var initSlides = function() {
+        // Maximize size of content wrapper, fade in content
+        maximizeSize($('#content'));
+        $('#content').fadeIn();
 
-    // Size each section
-    $('section').each(function(i) {
-        var section = $(this);
-        if (i === 0) {
-            section.addClass('active').removeClass('fast');
-        }
-        maximizeSize(section);
-    });
+        // Size each section
+        $('section').each(function(i) {
+            var section = $(this);
+            if (i === 0) {
+                section.addClass('active').removeClass('fast');
+            }
+            maximizeSize(section);
+        });
+    }
+
+    initSlides();
+    $(window).resize(initSlides);
 
     // Attr links
     $('.bubble .body a').attr('target', '_blank');
+
+    $('[data-toggle="modal"]').append($('<i class="icon icon-eye-open">'));
 
     // Scrolly on clicky
     $('.nav-buttons a, #nav a').click(function(){
@@ -44,5 +51,4 @@ function($, NavigationView) {
         }, 1000);
         return false;
     });
-    
 });
