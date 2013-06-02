@@ -81,3 +81,25 @@ h3 {
 .sidebar p {
     font-size: 13px; 
 }
+.bignumber span {
+    display: block;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.bignums {
+    margin-top: 10px;
+}
+
+.bignumber .number {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.explainer, .number-label {
+    font-size: 13px;
+    padding: 0 10px;
+    text-align: center;
+}
+

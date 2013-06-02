@@ -100,10 +100,16 @@ function($, NavigationView, jPlayer, Hightcharts) {
             plotShadow: false,
             type: 'pie',
             width: 600,
-            height: 400,
+            height: 220,
             backgroundColor: null,
             plotBackgroundColor: null,
-            plotBorderWidth: null
+            plotBorderWidth: null,
+            margin: [0, 0, 0, 0],
+            spacingTop: 0,
+            spacingBottom: 0,
+            spacingLeft: 0,
+            spacingRight: 0
+
         },
         title: {
             text: null
@@ -133,7 +139,7 @@ function($, NavigationView, jPlayer, Hightcharts) {
         series: [{
             type: 'pie',
             name: 'Immigrant Data',
-            size: '50%',
+            size: '60%',
             data: [
                 /*['Native Born',	2110448],
                 ['With health insurance coverage', 1795530],
