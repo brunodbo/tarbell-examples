@@ -141,23 +141,12 @@ function($, NavigationView, jPlayer, Hightcharts) {
             name: 'Immigrant Data',
             size: '60%',
             data: [
-                /*['Native Born',	2110448],
-                ['With health insurance coverage', 1795530],
-                ['With private health insurance', 1177207],
-                ['With public coverage', 765182],
-                ['No health insurance coverage', 314918],
-                ['Foreign Born' ,566712],
-                ['Naturalized', 224769],
-                ['With health insurance coverage', 181633],
-                ['With private health insurance', 132226],
-                ['With public coverage',70383],
-                ['No health insurance coverage',43136],*/
-                /*['Noncitizen',341943],*/
-                ['Health insurance',157649],
-                ['Private insurance', 111671],
-                ['Public coverage',50667],
-                ['No insurance',184294]
-                
+                ['No Insurance', 180424],
+                ['Former Employer or Union',96543],
+                ['Insurance Company',18507],
+                ['Medicare', 15443],
+                ['Medicaid', 44289],
+                ['Other', 1295]
             ]
         }]
     });

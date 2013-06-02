@@ -107,3 +107,7 @@ h3 {
 .small { font-size: 13px; }
 
 #graph-census { margin-left: -70px; }
+
+.bignum-header {
+  margin-bottom:20px;
+}
