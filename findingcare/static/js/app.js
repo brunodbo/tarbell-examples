@@ -99,30 +99,116 @@ function($, NavigationView, jPlayer, Hightcharts) {
             enabled: false
         },
         chart: {
-            type: "area"
+            type: 'pie',
+            width: 110,
+            height: 110,
+            margin: [0, 0, 0, 0],
+            spacingTop: 0,
+            spacingBottom: 0,
+            spacingLeft: 0,
+            spacingRight: 0,
+            backgroundColor: '#eeeeee'
         },
         title: {
-            text: 'Births per 1,000 residents',
-        },
-        yAxis: {
-            title: {
-                text: null
-            }
-        },
-        xAxis: {
-            categories: ['1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009']
-        },
-        legend: {
-            enabled: false
+            text: null,
         },
         plotOptions: {
-            series: {
-                animation: false
+            pie: { 
+                shadow: false
             }
         },
         series: [{
-            name: "Birthrate (per 1,000 residents)",
-            data: [1,2,3,4,5,6,7,8,9,10]
+            name: "Thing",
+            data: [
+                ['This', 20],
+                ['That', 35],
+                ['The other', 65]
+            ],
+            size: '100%',
+            innerSize: '55%',
+            dataLabels: {
+                enabled: false
+            }
+        }] 
+    });
+    $('#graph2-holder').highcharts({
+        credits: {
+            enabled: false
+        },
+        chart: {
+            type: 'pie',
+            width: 110,
+            height: 110,
+            margin: [0, 0, 0, 0],
+            spacingTop: 0,
+            spacingBottom: 0,
+            spacingLeft: 0,
+            spacingRight: 0,
+            backgroundColor: '#eeeeee'
+        },
+        title: {
+            text: null,
+        },
+        plotOptions: {
+            pie: { 
+                shadow: false
+            }
+        },
+        series: [{
+            name: "Thing",
+            data: [
+                ['This', 15],
+                ['That', 35],
+                ['The other', 45],
+                ['Foo', 25],
+                ['Bar', 5]
+            ],
+            size: '100%',
+            innerSize: '55%',
+            dataLabels: {
+                enabled: false
+            }
+        
+        }] 
+    });
+    $('#graph3-holder').highcharts({
+        credits: {
+            enabled: false
+        },
+        chart: {
+            type: 'pie',
+            width: 110,
+            height: 110,
+            margin: [0, 0, 0, 0],
+            spacingTop: 0,
+            spacingBottom: 0,
+            spacingLeft: 0,
+            spacingRight: 0,
+            backgroundColor: '#eeeeee'
+        },
+        title: {
+            text: null,
+        },
+        plotOptions: {
+            pie: { 
+                shadow: false
+            }
+        },
+        series: [{
+            name: "Thing",
+            data: [
+                ['This', 10],
+                ['That', 40],
+                ['Foo', 10],
+                ['The other', 35],
+                ['Bar', 5]
+            ],
+            size: '100%',
+            innerSize: '55%',
+            dataLabels: {
+                enabled: false
+            }
+        
         }] 
     });
 });

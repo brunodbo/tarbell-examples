@@ -20,21 +20,24 @@
     <div class="background-image"><img src="{{ slide1.image.value }}" /></div>
 
     <div class="bubble fast" id="slide1-bubble1" style="width: {{ slide1.bubble_width.value }}; left: {{ slide1.bubble_position_x.value }}; top: {{ slide1.bubble_position_y.value }};">
+        <div class="bubble-inner">
+            <h1>{{ slide1.title.value|process_text }}</h1>
 
-        <h1>{{ slide1.title.value }}</h1>
-
-        <div class="body row-fluid">
-            <div class="span8">
+            <div class="body">
                 {{ slide1.body.markup|markdown }} 
             </div>
-            <div class="span4 sidebar">
-                {{ player_macros.player('slide1', slide1.audio_var.value) }}
-                {{ slide1.sidebar.markup|process_text}} 
+            <div class="row-fluid audio-wrapper">
+                <div class="span5">
+                    {{ player_macros.player('slide1', slide1.audio_var.value) }}
+                </div>
+                <div class="span7">
+                    <p class="audio-caption">{{ slide1.audio_caption.value }}</p>
+                </div>
             </div>
-        </div>
 
-        <div class="nav-buttons">
-            <a href="#slide2" class="btn btn-primary">Next &raquo;</a>
+            <div class="nav-buttons">
+                <a href="#slide2" class="btn btn-primary">Next &raquo;</a>
+            </div>
         </div>
     </div>
 
@@ -44,21 +47,22 @@
     <div class="background-image"><img src="{{ slide2.image.value }}" /></div>
 
     <div class="bubble" id="slide2-bubble1" style="width: {{ slide2.bubble_width.value }}; left: {{ slide2.bubble_position_x.value }}; top: {{ slide2.bubble_position_y.value }};">
+        <div class="bubble-inner">
+            <h1>{{ slide2.title.value }}</h1>
 
-        <h1>{{ slide2.title.value }}</h1>
-
-        <div class="body row-fluid">
-            <div class="span8">
-                {{ slide2.body.markup|markdown }} 
+            <div class="body row-fluid">
+                <div class="span8">
+                    {{ slide2.body.markup|markdown }} 
+                </div>
+                <div class="span4 sidebar">
+                    {{ slide2.sidebar.markup|markdown}} 
+                </div>
             </div>
-            <div class="span4 sidebar">
-                {{ slide2.sidebar.markup|process_text}} 
-            </div>
-        </div>
 
-        <div class="nav-buttons">
-            <a href="#slide1" class="btn btn-primary">&laquo; Previous</a>
-            <a href="#slide3" class="btn btn-primary">Next &raquo;</a>
+            <div class="nav-buttons">
+                <a href="#slide1" class="btn btn-primary">&laquo; Previous</a>
+                <a href="#slide3" class="btn btn-primary">Next &raquo;</a>
+            </div>
         </div>
     </div>
 </section>
@@ -67,20 +71,22 @@
     <div class="background-image"><img src="{{ slide3.image.value }}" /></div>
 
     <div class="bubble" id="slide3-bubble1" style="width: {{ slide3.bubble_width.value }}; left: {{ slide3.bubble_position_x.value }}; top: {{ slide3.bubble_position_y.value }};">
+        <div class="bubble-inner">
+            <h1>{{ slide3.title.value }}</h1>
 
-        <h1>{{ slide3.title.value }}</h1>
-
-        <div class="body row-fluid">
-            <div class="span8">
+            <div class="body row-fluid">
                 {{ slide3.body.markup|markdown }} 
             </div>
-            <div class="span4 sidebar">
-                {{ slide3.sidebar.markup|process_text}} 
+            <div class="nav-buttons">
+                <a href="#slide2" class="btn btn-primary">&laquo; Previous</a>
+                <a href="#slide4" class="btn btn-primary">Next &raquo;</a>
             </div>
         </div>
-        <div class="nav-buttons">
-            <a href="#slide2" class="btn btn-primary">&laquo; Previous</a>
-            <a href="#slide4" class="btn btn-primary">Next &raquo;</a>
+    </div>
+
+    <div class="bubble sidebar" id="slide3-bubble1" style="width: 60%; left: 39%; top: {{ slide3.bubble_position_y.value }};">
+        <div class="bubble-inner">
+            {{ slide3.sidebar.markup|markdown }} 
         </div>
     </div>
 </section>
@@ -89,19 +95,14 @@
     <div class="background-image"><img src="{{ slide4.image.value }}" /></div>
 
     <div class="bubble" id="slide4-bubble1" style="width: {{ slide4.bubble_width.value }}; left: {{ slide4.bubble_position_x.value }}; top: {{ slide4.bubble_position_y.value }};">
-
-        <h1>{{ slide4.title.value }}</h1>
-
-        <div class="body row-fluid">
-            <div class="span8">
+        <div class="bubble-inner">
+            <h1>{{ slide4.title.value }}</h1>
+            <div class="body">
                 {{ slide4.body.markup|markdown }} 
             </div>
-            <div class="span4 sidebar">
-                {{ slide4.sidebar.markup|process_text}} 
+            <div class="nav-buttons">
+                <a href="#slide3" class="btn btn-primary">&laquo; Previous</a>
             </div>
-        </div>
-        <div class="nav-buttons">
-            <a href="#slide3" class="btn btn-primary">&laquo; Previous</a>
         </div>
     </div>
 </section>
