@@ -45,8 +45,10 @@ div.jp-audio div.jp-type-single div.jp-progress,
 div.jp-audio div.jp-type-single div.jp-time-holder { left: 45px; width: 70px; }
 div.jp-audio div.jp-progress { top: 22px; }
 div.jp-audio div.jp-type-single div.jp-time-holder { top: 44px; } 
+div.jp-audio { background-color: transparent; }
+div.jp-type-single .jp-gui{ background-color: transparent; }
 
-.highcharts-container {
+a.highcharts-container {
     margin: 0 auto;
 }
 
