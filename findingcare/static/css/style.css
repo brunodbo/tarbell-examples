@@ -26,12 +26,11 @@ a.modal-link i { margin-left: 4px; }
 .bubble {
     display: none;
     position: absolute; 
-    background-color: #eee;
+    background-color: rgba(230,230,230,.7);
     z-index: 10;
     color: #000;
 }
 .bubble-inner {
-    border: 2px solid #999;
     padding: 14px 25px;
 }
 .bubble h1 { margin-bottom: 25px; }
