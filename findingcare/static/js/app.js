@@ -100,14 +100,11 @@ function($, NavigationView, jPlayer, Hightcharts) {
         },
         chart: {
             type: 'pie',
-            width: 110,
-            height: 110,
-            margin: [0, 0, 0, 0],
-            spacingTop: 0,
-            spacingBottom: 0,
-            spacingLeft: 0,
-            spacingRight: 0,
-            backgroundColor: '#eeeeee'
+            width: 250,
+            height: 250,
+            backgroundColor: '#eeeeee',
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
         },
         title: {
             text: null,
@@ -124,91 +121,14 @@ function($, NavigationView, jPlayer, Hightcharts) {
                 ['That', 35],
                 ['The other', 65]
             ],
-            size: '100%',
-            innerSize: '55%',
+            size: '80%',
+            innerSize: '30%',
             dataLabels: {
                 enabled: false
+                //formatter: function() {
+                    //return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
+                //}
             }
         }] 
     });
-    $('#graph2-holder').highcharts({
-        credits: {
-            enabled: false
-        },
-        chart: {
-            type: 'pie',
-            width: 110,
-            height: 110,
-            margin: [0, 0, 0, 0],
-            spacingTop: 0,
-            spacingBottom: 0,
-            spacingLeft: 0,
-            spacingRight: 0,
-            backgroundColor: '#eeeeee'
-        },
-        title: {
-            text: null,
-        },
-        plotOptions: {
-            pie: { 
-                shadow: false
-            }
-        },
-        series: [{
-            name: "Thing",
-            data: [
-                ['This', 15],
-                ['That', 35],
-                ['The other', 45],
-                ['Foo', 25],
-                ['Bar', 5]
-            ],
-            size: '100%',
-            innerSize: '55%',
-            dataLabels: {
-                enabled: false
-            }
-        
-        }] 
-    });
-    $('#graph3-holder').highcharts({
-        credits: {
-            enabled: false
-        },
-        chart: {
-            type: 'pie',
-            width: 110,
-            height: 110,
-            margin: [0, 0, 0, 0],
-            spacingTop: 0,
-            spacingBottom: 0,
-            spacingLeft: 0,
-            spacingRight: 0,
-            backgroundColor: '#eeeeee'
-        },
-        title: {
-            text: null,
-        },
-        plotOptions: {
-            pie: { 
-                shadow: false
-            }
-        },
-        series: [{
-            name: "Thing",
-            data: [
-                ['This', 10],
-                ['That', 40],
-                ['Foo', 10],
-                ['The other', 35],
-                ['Bar', 5]
-            ],
-            size: '100%',
-            innerSize: '55%',
-            dataLabels: {
-                enabled: false
-            }
-        
-        }] 
-    });
-});
+ });

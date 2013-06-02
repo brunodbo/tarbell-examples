@@ -84,9 +84,19 @@
         </div>
     </div>
 
-    <div class="bubble sidebar" id="slide3-bubble1" style="width: 60%; left: 39%; top: {{ slide3.bubble_position_y.value }};">
+    <div class="sidebar bubble" id="slide3-sidebar1" style="width: {{ slide3.sidebar_width.value }}; left: {{ slide3.sidebar_position_x.value }}; top: {{ slide3.sidebar_position_y.value }};">
         <div class="bubble-inner">
-            {{ slide3.sidebar.markup|markdown }} 
+            <h3>{{ slide3.sidebar_title.value }}</h3>
+
+            <div class="row-fluid">
+                <div class="span6">
+                    <div id="graph1-holder"></div>
+                </div>
+                <div class="span6">
+                    <p>{{ slide3.sidebar_source.value|markdown }}</p>
+                    <p>{{ slide3.sidebar_note.value|markdown }}</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
