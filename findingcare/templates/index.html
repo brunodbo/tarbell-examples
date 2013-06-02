@@ -78,24 +78,6 @@
             </div>
         </div>
     </div>
-
-    {#
-    <div class="sidebar bubble" id="slide3-sidebar1" style="width: {{ slide3.sidebar_width.value }}; left: {{ slide3.sidebar_position_x.value }}; top: {{ slide3.sidebar_position_y.value }};">
-        <div class="bubble-inner">
-            <h3>{{ slide3.sidebar_title.value }}</h3>
-
-            <div class="row-fluid">
-                <div class="span6">
-                    <div id="graph1-holder"></div>
-                </div>
-                <div class="span6">
-                    <p>{{ slide3.sidebar_source.value|markdown }}</p>
-                    <p>{{ slide3.sidebar_note.value|markdown }}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    #}
 </section>
 
 <section id="slide4" data-title="{{ slide4.title.value }}">
@@ -109,25 +91,26 @@
             </div>
             <div class="nav-buttons">
                 <a href="#slide3" class="btn btn-primary">&laquo; Previous</a>
+                <a href="#slide5" class="btn btn-primary">Next &raquo;</a>
             </div>
         </div>
     </div>
 </section>
 
+<section id="slide5" data-title="{{ slide5.title.value }}">
+    <div class="background-image"><img src="{{ slide5.image.value }}" /></div>
 
-{% for modal in modals %}
-<div id="{{ modal.id }}" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3>{{ modal.title }}</h3>
-  </div>
-  <div class="modal-body">
-    {{ modal.body|markdown }}
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-  </div>
-</div>
-{% endfor %}
+    <div class="bubble" id="slide5-bubble1" style="width: {{ slide5.bubble_width.value }}; left: {{ slide5.bubble_position_x.value }}; top: {{ slide5.bubble_position_y.value }};">
+        <div class="bubble-inner">
+            <h1>{{ slide5.title.value }}</h1>
+            <div class="body">
+                {{ slide5.body.markup|markdown }} 
+            </div>
+            <div class="nav-buttons">
+                <a href="#slide4" class="btn btn-primary">&laquo; Previous</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
