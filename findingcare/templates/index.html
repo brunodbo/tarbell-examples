@@ -50,13 +50,8 @@
         <div class="bubble-inner">
             <h1>{{ slide2.title.value }}</h1>
 
-            <div class="body row-fluid">
-                <div class="span8">
-                    {{ slide2.body.markup|markdown }} 
-                </div>
-                <div class="span4 sidebar">
-                    {{ slide2.sidebar.markup|markdown}} 
-                </div>
+            <div class="body">
+                {{ slide2.body.markup|markdown }} 
             </div>
 
             <div class="nav-buttons">
@@ -84,6 +79,7 @@
         </div>
     </div>
 
+    {#
     <div class="sidebar bubble" id="slide3-sidebar1" style="width: {{ slide3.sidebar_width.value }}; left: {{ slide3.sidebar_position_x.value }}; top: {{ slide3.sidebar_position_y.value }};">
         <div class="bubble-inner">
             <h3>{{ slide3.sidebar_title.value }}</h3>
@@ -99,6 +95,7 @@
             </div>
         </div>
     </div>
+    #}
 </section>
 
 <section id="slide4" data-title="{{ slide4.title.value }}">

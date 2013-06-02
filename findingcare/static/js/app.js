@@ -102,7 +102,7 @@ function($, NavigationView, jPlayer, Hightcharts) {
             type: 'pie',
             width: 250,
             height: 250,
-            backgroundColor: '#eeeeee',
+            backgroundColor: null,
             plotBackgroundColor: null,
             plotBorderWidth: null,
         },
