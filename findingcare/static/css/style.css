@@ -32,13 +32,14 @@ a.modal-link i { margin-left: 4px; }
     color: #000;
     border: 2px solid #999;
 }
+.bubble h1 { margin-bottom: 25px; }
 
 .navbar { position: absolute; z-index: 500; top: 0; left: 0; width: 100%; }
 .navbar-inner { border-radius: 0; }
 
-.nav-buttons { text-align: center; }
+.nav-buttons { text-align: center; margin-top: 25px; }
 
-div.jp-audio, div.jp-interface { border: none; width: 185px; overflow: hidden; }
+div.jp-audio, div.jp-interface { border: none; width: 185px; overflow: hidden; margin: 0 auto; }
 div.jp-audio div.jp-type-single div.jp-progress,
 div.jp-audio div.jp-type-single div.jp-time-holder { left: 45px; width: 120px; }
 div.jp-audio div.jp-progress { top: 22px; }

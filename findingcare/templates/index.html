@@ -16,32 +16,27 @@
 
 {% block content %}
 
-
-
-
 <section id="slide1" data-title="{{ slide1.title.value }}">
     <div class="background-image"><img src="{{ slide1.image.value }}" /></div>
 
     <div class="bubble fast" id="slide1-bubble1" style="width: {{ slide1.bubble_width.value }}; left: {{ slide1.bubble_position_x.value }}; top: {{ slide1.bubble_position_y.value }};">
 
-    <h1>{{ slide1.title.value }}</h1>
+        <h1>{{ slide1.title.value }}</h1>
 
-    <div class="body">
-        <div class="audio-wrapper row-fluid">
-            <div class="span6">
-                <p>{{ slide1.audio_caption.value }}</p>
+        <div class="body row-fluid">
+            <div class="span8">
+                {{ slide1.body.markup|markdown }} 
             </div>
-            <div class="span6">
-            {{ player_macros.player('slide1', slide1.audio_var.value) }}
+            <div class="span4 sidebar">
+                {{ player_macros.player('slide1', slide1.audio_var.value) }}
+                {{ slide1.sidebar.markup|process_text}} 
             </div>
         </div>
-        {{ slide1.body.markup|markdown }} 
-    </div>
 
-    <div class="nav-buttons">
-        <a href="#slide2" class="btn btn-primary">Next &raquo;</a>
+        <div class="nav-buttons">
+            <a href="#slide2" class="btn btn-primary">Next &raquo;</a>
+        </div>
     </div>
-</div>
 
 </section>
 
@@ -52,9 +47,13 @@
 
         <h1>{{ slide2.title.value }}</h1>
 
-        <div class="body">
-            {{ player_macros.player('slide2', slide2.audio_var.value) }}
-            {{ slide2.body.markup|markdown }} 
+        <div class="body row-fluid">
+            <div class="span8">
+                {{ slide2.body.markup|markdown }} 
+            </div>
+            <div class="span4 sidebar">
+                {{ slide2.sidebar.markup|process_text}} 
+            </div>
         </div>
 
         <div class="nav-buttons">
@@ -71,11 +70,14 @@
 
         <h1>{{ slide3.title.value }}</h1>
 
-        <div class="body">
-            {{ player_macros.player('slide3', slide3.audio_var.value) }}
-            {{ slide3.body.markup|markdown }} 
+        <div class="body row-fluid">
+            <div class="span8">
+                {{ slide3.body.markup|markdown }} 
+            </div>
+            <div class="span4 sidebar">
+                {{ slide3.sidebar.markup|process_text}} 
+            </div>
         </div>
-
         <div class="nav-buttons">
             <a href="#slide2" class="btn btn-primary">&laquo; Previous</a>
             <a href="#slide4" class="btn btn-primary">Next &raquo;</a>
@@ -90,11 +92,14 @@
 
         <h1>{{ slide4.title.value }}</h1>
 
-        <div class="body">
-            {{ player_macros.player('slide4', slide4.audio_var.value) }}
-            {{ slide4.body.markup|markdown }} 
+        <div class="body row-fluid">
+            <div class="span8">
+                {{ slide4.body.markup|markdown }} 
+            </div>
+            <div class="span4 sidebar">
+                {{ slide4.sidebar.markup|process_text}} 
+            </div>
         </div>
-
         <div class="nav-buttons">
             <a href="#slide3" class="btn btn-primary">&laquo; Previous</a>
         </div>
