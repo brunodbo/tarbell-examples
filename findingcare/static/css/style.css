@@ -104,3 +104,6 @@ h3 {
     text-align: center;
 }
 
+.small { font-size: 13px; }
+
+#graph-census { margin-left: -70px; }
