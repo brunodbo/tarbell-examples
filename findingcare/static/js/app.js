@@ -93,42 +93,67 @@ function($, NavigationView, jPlayer, Hightcharts) {
 
     });
 
-    // Custom chart
-    $('#graph1-holder').highcharts({
+    $('#graph-census').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie',
+            width: 600,
+            height: 400,
+            backgroundColor: null,
+            plotBackgroundColor: null,
+            plotBorderWidth: null
+        },
+        title: {
+            text: null
+        },
         credits: {
             enabled: false
         },
-        chart: {
-            type: 'pie',
-            width: 250,
-            height: 250,
-            backgroundColor: null,
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-        },
-        title: {
-            text: null,
+        tooltip: {
+            pointFormat: '{series.name}: <b>'+ '{point.percentage}' + '%</b>',
+            percentageDecimals: 1
         },
         plotOptions: {
-            pie: { 
-                shadow: false
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                shadow: false,
+                dataLabels: {
+                    enabled: true,
+                    color: '#000000',
+                    connectorColor: '#000000',
+                    formatter: function() {
+                        return '<b>'+ this.point.name +'</b>: <br />'+ Highcharts.numberFormat(this.percentage, 1)+' %';
+                    }
+                }
             }
         },
         series: [{
-            name: "Thing",
+            type: 'pie',
+            name: 'Immigrant Data',
+            size: '50%',
             data: [
-                ['This', 20],
-                ['That', 35],
-                ['The other', 65]
-            ],
-            size: '80%',
-            innerSize: '30%',
-            dataLabels: {
-                enabled: false
-                //formatter: function() {
-                    //return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
-                //}
-            }
-        }] 
+                /*['Native Born',	2110448],
+                ['With health insurance coverage', 1795530],
+                ['With private health insurance', 1177207],
+                ['With public coverage', 765182],
+                ['No health insurance coverage', 314918],
+                ['Foreign Born' ,566712],
+                ['Naturalized', 224769],
+                ['With health insurance coverage', 181633],
+                ['With private health insurance', 132226],
+                ['With public coverage',70383],
+                ['No health insurance coverage',43136],*/
+                /*['Noncitizen',341943],*/
+                ['Health insurance',157649],
+                ['Private insurance', 111671],
+                ['Public coverage',50667],
+                ['No insurance',184294]
+                
+            ]
+        }]
     });
- });
+
+});
