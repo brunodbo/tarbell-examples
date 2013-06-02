@@ -12,8 +12,8 @@ require.config( {
         },
     }
 } );
-require([ 'jquery', 'base/views/NavigationView', 'jPlayer' ],
-function($, NavigationView, jPlayer) {
+require([ 'jquery', 'base/views/NavigationView', 'jPlayer', 'highcharts' ],
+function($, NavigationView, jPlayer, Hightcharts) {
     // Navigation view: Use Backbone view from base app to generate nav bar
     var nav = new NavigationView({
         el: $('#header'),
@@ -91,5 +91,38 @@ function($, NavigationView, jPlayer) {
         });
         return false;
 
+    });
+
+    // Custom chart
+    $('#graph1-holder').highcharts({
+        credits: {
+            enabled: false
+        },
+        chart: {
+            type: "area"
+        },
+        title: {
+            text: 'Births per 1,000 residents',
+        },
+        yAxis: {
+            title: {
+                text: null
+            }
+        },
+        xAxis: {
+            categories: ['1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009']
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                animation: false
+            }
+        },
+        series: [{
+            name: "Birthrate (per 1,000 residents)",
+            data: [1,2,3,4,5,6,7,8,9,10]
+        }] 
     });
 });

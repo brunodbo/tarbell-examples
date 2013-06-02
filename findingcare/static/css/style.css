@@ -23,20 +23,6 @@ a.modal-link { color: #00c; }
 
 a.modal-link i { margin-left: 4px; }
 
-.audio-wrapper {
-    padding: 0 0 15px 0;
-    border-top: 1px solid #999;
-    border-bottom: 1px solid #999;
-    margin-bottom: 15px;
-}
-
-.audio-wrapper p {
-    margin-bottom: 0;
-    font-style: italic;
-    color: #555;
-    text-align: center;
-}
-
 .bubble {
     display: none;
     position: absolute; 
@@ -52,4 +38,27 @@ a.modal-link i { margin-left: 4px; }
 
 .nav-buttons { text-align: center; }
 
-div.jp-audio, div.jp-interface { border: none; margin: 0 auto; }
+div.jp-audio, div.jp-interface { border: none; width: 185px; overflow: hidden; }
+div.jp-audio div.jp-type-single div.jp-progress,
+div.jp-audio div.jp-type-single div.jp-time-holder { left: 45px; width: 120px; }
+div.jp-audio div.jp-progress { top: 22px; }
+div.jp-audio div.jp-type-single div.jp-time-holder { top: 44px; } 
+
+.audio-wrapper {
+    padding: 0 0 5px 0;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    margin-bottom: 10px;
+}
+
+.audio-wrapper p {
+    margin-bottom: 0;
+    font-style: italic;
+    color: #555;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+div.jp-audio ul.jp-controls { padding-left: 0; }
+
+.modal { width: auto; max-width: 80%; }
